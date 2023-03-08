@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 * {
@@ -17,7 +17,12 @@ body {
     background-color: #000000;
     background: #282828;
     font-size: 16px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-style: uppercase;
+    font-weight: 600;
+    font-stretch: normal;
+    src: url(https://fonts.gstatic.com/s/opensans/v34/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk5hkWV0ewJER.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
 a {
@@ -100,7 +105,7 @@ hr {
 }
 
 /*News Cards*/
-.news-cards-two {
+/* .news-cards-two {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     background: url(https://4kwallpapers.com/images/wallpapers/dark-background-abstract-background-network-3d-background-2560x1440-8324.png);
@@ -126,6 +131,109 @@ hr {
     text-transform: uppercase;
     display: inline-block;
     font-weight: bold;
+} */
+.body{
+    margin: 0;
+    padding: 0;
+    min-height: 10vh;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open sans';
+}
+
+.container-two{
+    width: 1000px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+}
+
+.container-two .card{
+    position: relative;
+    cursor: pointer;
+}
+
+.container-two .card .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.container-two .card .face.face1{
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container-two .card:hover .face.face1{
+    background: #00FF00;
+    transform: translateY(0);
+}
+
+.container-two .card .face.face1 .content{
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+.container-two .card:hover .face.face1 .content{
+    opacity: 1;
+}
+
+.container-two .card .face.face1 .content img{
+    max-width: 100px;
+}
+
+.container-two .card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.container-two .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.container-two .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container-two .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+.container-two .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.container-two .card .face.face2 .content a:hover{
+    background: #333;
+    color: #000;
 }
 
 /*Contact form*/
